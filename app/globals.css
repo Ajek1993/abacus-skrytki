@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.skrytki-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.skrytka-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skrytka-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.kod-display {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+}
+
+.kod-label {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.kod-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.meta-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ecf0f1;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.error {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success {
+  background-color: #2ecc71;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.historia-section {
+  margin-top: 40px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historia-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.historia-header {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.historia-table-container {
+  overflow-x: auto;
+}
+
+.historia-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historia-table thead {
+  background-color: #34495e;
+  color: white;
+}
+
+.historia-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.historia-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.historia-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.historia-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.skrytka-number {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.kod-cell {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #2c3e50;
+}
+
+.no-data {
+  text-align: center;
+  color: #95a5a6;
+  font-style: italic;
+  padding: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .historia-table {
+    font-size: 0.85rem;
+  }
+
+  .historia-table th,
+  .historia-table td {
+    padding: 8px;
+  }
+}
